@@ -1,10 +1,14 @@
 name: Build
 on:
   push:
+  workflow_dispatch:
+    inputs:
+      github.event_name:
   pull_request:
     types: [opened, synchronize, reopened]
   release:
     types: [published]
+    
 
 jobs:
 
